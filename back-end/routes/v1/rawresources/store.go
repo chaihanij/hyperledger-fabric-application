@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/models"
 
-	RawResourcesModel "github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models/v1/rawresources"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/hyperledger"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/hyperledger"
+	RawResourcesModel "github.com/chaihanij/hyperledger-fabric-application/back-end/models/v1/rawresources"
 )
 
 func Store(clients *hyperledger.Clients) http.HandlerFunc {
@@ -23,7 +23,7 @@ func Store(clients *hyperledger.Clients) http.HandlerFunc {
 		}
 
 		newRawResource, err := RawResourcesModel.Store(
-			clients, 
+			clients,
 			rawresource.Name,
 			rawresource.TypeID,
 			rawresource.Weight,

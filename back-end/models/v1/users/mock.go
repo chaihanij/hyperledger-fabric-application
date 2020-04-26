@@ -1,7 +1,7 @@
 package users
 
 import (
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/models"
 )
 
 var mockUsers models.Users

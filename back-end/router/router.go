@@ -1,8 +1,8 @@
 package router
 
 import (
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/models"
 	"github.com/gorilla/mux"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models"
 )
 
 type Router struct {

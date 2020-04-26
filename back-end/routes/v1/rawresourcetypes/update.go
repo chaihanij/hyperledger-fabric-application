@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"net/http"
 
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/models"
 	"github.com/gorilla/mux"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models"
 
-	RawResourceTypesModel "github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models/v1/rawresourcetypes"
+	RawResourceTypesModel "github.com/chaihanij/hyperledger-fabric-application/back-end/models/v1/rawresourcetypes"
 )
 
 func Update() http.HandlerFunc {

@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/models"
 
-	RawResourceTypesModel "github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models/v1/rawresourcetypes"
+	RawResourceTypesModel "github.com/chaihanij/hyperledger-fabric-application/back-end/models/v1/rawresourcetypes"
 )
 
 func Store() http.HandlerFunc {

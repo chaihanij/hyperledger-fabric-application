@@ -1,9 +1,9 @@
 package router
 
 import (
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models"
-	HomeHandler "github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/routes/home"
-	StatusHandler "github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/routes/status"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/models"
+	HomeHandler "github.com/chaihanij/hyperledger-fabric-application/back-end/routes/home"
+	StatusHandler "github.com/chaihanij/hyperledger-fabric-application/back-end/routes/status"
 )
 
 func GetRoutes() models.Routes {

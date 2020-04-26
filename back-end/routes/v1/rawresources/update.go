@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"net/http"
 
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/models"
 	"github.com/gorilla/mux"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models"
 
-	RawResourcesModel "github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models/v1/rawresources"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/hyperledger"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/hyperledger"
+	RawResourcesModel "github.com/chaihanij/hyperledger-fabric-application/back-end/models/v1/rawresources"
 )
 
 func Update(clients *hyperledger.Clients) http.HandlerFunc {

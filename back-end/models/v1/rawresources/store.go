@@ -1,15 +1,16 @@
 package rawresources
 
 import (
-	"time"
 	"encoding/json"
-	"github.com/satori/go.uuid"
+	"time"
 
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/hyperledger"
+	uuid "github.com/satori/go.uuid"
+
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/hyperledger"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/models"
 )
 
-func Store(clients *hyperledger.Clients,name string, typeID string, weight int, arrivalTime *time.Time) (rawresource *models.RawResource, err error) {
+func Store(clients *hyperledger.Clients, name string, typeID string, weight int, arrivalTime *time.Time) (rawresource *models.RawResource, err error) {
 	rawresource = new(models.RawResource)
 
 	rawresource.ID = uuid.NewV4().String()

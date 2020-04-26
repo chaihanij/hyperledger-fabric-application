@@ -161,3 +161,31 @@ peer chaincode invoke -C mainchannel -n rawresources -c '{"Args":["store", "{"id
 peer chaincode query -C mainchannel -n rawresources -c '{"Args":["queryString", "{"selector":{ "weight": { "$gt":5000 } }}"]}' -o orderer0-service:7050 --tls --cafile=/etc/hyperledger/orderers/msp/tlscacerts/ca-root-7054.pem
 
 ```
+
+## Application client
+
+Run application
+
+```shell
+cd back-end
+
+HYPERLEDGER_CONFIG_PATH=/Users/kongnb2k/Entronica/learn/hyperledger-fabric-application/back-end/hyperledger/config.yaml go run main.go
+
+```
+
+Query Data
+
+```shell
+curl --location --request GET 'http://localhost:3000/v1/rawresources'
+```
+
+Invoke Data
+
+```shell
+curl --location --request POST 'http://localhost:3000/v1/rawresources' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "ENTRONICA",
+    "weight": 10000
+}'
+```

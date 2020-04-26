@@ -1,13 +1,14 @@
 package router
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 
 	"github.com/gorilla/mux"
 
-	V1Router "github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/routes/v1"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/hyperledger"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/hyperledger"
+	V1Router "github.com/chaihanij/hyperledger-fabric-application/back-end/routes/v1"
 )
 
 const (
@@ -56,6 +57,7 @@ func GetRouter() Service {
 	}
 
 	for name, pack := range V1Router.GetRoutes(clients) {
+		fmt.Println(name)
 		r.AttachSubRouterWithMiddleware(name, pack.Routes, pack.Middleware)
 	}
 

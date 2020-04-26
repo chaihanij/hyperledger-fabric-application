@@ -1,7 +1,7 @@
 package rawresources
 
 import (
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/hyperledger"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/hyperledger"
 )
 
 func Destroy(clients *hyperledger.Clients, id string) error {
@@ -12,7 +12,7 @@ func Destroy(clients *hyperledger.Clients, id string) error {
 
 	res.Visible = false
 
-	if _, err = Update(clients, id, res, &UpdateOpts{ Replace: true }); err != nil {
+	if _, err = Update(clients, id, res, &UpdateOpts{Replace: true}); err != nil {
 		return err
 	}
 

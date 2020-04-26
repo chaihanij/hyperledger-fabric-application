@@ -3,11 +3,11 @@ package v1
 import (
 	"net/http"
 
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models"
-	RawResourcesHandler "github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/routes/v1/rawresources"
-	RawResourceTypesHandler "github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/routes/v1/rawresourcetypes"
-	UsersHandler "github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/routes/v1/users"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/hyperledger"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/hyperledger"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/models"
+	RawResourcesHandler "github.com/chaihanij/hyperledger-fabric-application/back-end/routes/v1/rawresources"
+	RawResourceTypesHandler "github.com/chaihanij/hyperledger-fabric-application/back-end/routes/v1/rawresourcetypes"
+	UsersHandler "github.com/chaihanij/hyperledger-fabric-application/back-end/routes/v1/users"
 )
 
 func Middleware() func(http.Handler) http.Handler {

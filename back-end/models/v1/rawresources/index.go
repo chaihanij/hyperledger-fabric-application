@@ -2,8 +2,9 @@ package rawresources
 
 import (
 	"encoding/json"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/hyperledger"
+
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/hyperledger"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/models"
 )
 
 func Index(clients *hyperledger.Clients) (rawresources *models.RawResources, err error) {

@@ -2,15 +2,16 @@ package rawresources
 
 import (
 	"encoding/json"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models"
-	"github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/hyperledger"
+
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/hyperledger"
+	"github.com/chaihanij/hyperledger-fabric-application/back-end/models"
 )
 
 type UpdateOpts struct {
 	Replace bool
 }
 
-func Update(clients *hyperledger.Clients,id string, rr *models.RawResource, opts *UpdateOpts) (*models.RawResource, error) {
+func Update(clients *hyperledger.Clients, id string, rr *models.RawResource, opts *UpdateOpts) (*models.RawResource, error) {
 	if !opts.Replace {
 		existingRawResource, err := Show(clients, id)
 		if err != nil {

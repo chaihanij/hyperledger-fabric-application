@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	UsersModel "github.com/happilymarrieddad/hyperledger-fabric-kubernetes/s5-connecting-everything/backend/models/v1/users"
+	UsersModel "github.com/chaihanij/hyperledger-fabric-application/back-end/models/v1/users"
 )
 
 func Index() http.HandlerFunc {
